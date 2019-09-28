@@ -29,16 +29,18 @@ $(function calc () {
         let operator = $(this).attr("value");
         arr.push(operator);
 
-        if ((arr[arr.length-2] === "+" || "-" || "/" || "*")) {
-            // if (arr[arr.length-1] === "+" || "-" || "/" || "*") {
-            //     console.log("yes");
-            // } 
+        if (arr[arr.length-2] === ("+" || "-" || "/" || "*")) {
+            if (arr[arr.length-1] === ("+" || "-" || "/" || "*")) {
+                arr.pop();
+            } 
         }
 
+        console.log(arr)
+
         // console.log(arr[arr.length-1]);
 
         // console.log(arr[arr.length-1]);
-        // console.log(arr[arr.length-2]);
+
 
     });
 
