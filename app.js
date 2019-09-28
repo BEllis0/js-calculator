@@ -20,13 +20,23 @@ $(function calc () {
         let decimalPoint = $(this).attr("value");
         arr.push(decimalPoint);
 
+        //removes multiple decimals used in a row
         if (arr[arr.length-2] === (".")) {
             if (arr[arr.length-1] === (".")) {
                 arr.pop();
             } 
         }
 
-        console.log(arr);
+        // looks for duplicate decimals in arr, doesn't allow second decimal
+        function checkIfArrayIsUnique(arr) {
+            return arr.length === new Set(arr).size;
+        }
+
+        checkIfArrayIsUnique(arr)
+
+        if (checkIfArrayIsUnique(arr) === false) {
+            arr.pop()
+        }
 
     });
 
