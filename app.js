@@ -19,6 +19,13 @@ $(function calc () {
         //$('#current-num').html($(this).attr("value"));
         let decimalPoint = $(this).attr("value");
         arr.push(decimalPoint);
+
+        if (arr[arr.length-2] === (".")) {
+            if (arr[arr.length-1] === (".")) {
+                arr.pop();
+            } 
+        }
+
         console.log(arr);
 
     });
@@ -29,6 +36,7 @@ $(function calc () {
         let operator = $(this).attr("value");
         arr.push(operator);
 
+        // handles multiple operators used in a row
         if (arr[arr.length-2] === ("+" || "-" || "/" || "*")) {
             if (arr[arr.length-1] === ("+" || "-" || "/" || "*")) {
                 arr.pop();
@@ -36,10 +44,6 @@ $(function calc () {
         }
 
         console.log(arr)
-
-        // console.log(arr[arr.length-1]);
-
-        // console.log(arr[arr.length-1]);
 
 
     });
