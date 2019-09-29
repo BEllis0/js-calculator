@@ -9,35 +9,54 @@
         <title>Calculator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel="stylesheet" type="text/css" href="/Users/brandonellis/Documents/Code Projects/calculator/style.css">
     </head>
     <body>
 
     <div id="app">
-        
-    <div id="display"></div>
+
+    <div id="display" class="col-xs-12"></div>
 
     <ul id="calc-items">
-        <li id="zero" class="calc-num calc-item" value="0">0</li>
-        <li id="one" class="calc-num calc-item" value="1">1</li>
-        <li id="two" class="calc-num calc-item" value="2">2</li>
-        <li id="three" class="calc-num calc-item" value="3">3</li>
-        <li id="four" class="calc-num calc-item" value="4">4</li>
-        <li id="five"class="calc-num calc-item" value="5">5</li>
-        <li id="six" class="calc-num calc-item" value="6">6</li>
-        <li id="seven"class="calc-num calc-item" value="7">7</li>
-        <li id="eight" class="calc-num calc-item" value="8">8</li>
-        <li id="nine" class="calc-num calc-item" value="9">9</li>
 
-        <li id="decimal" class="calc-item" value=".">.</li>
+        <div class="row align-items-center">
+        <li id="clear" class="calc-item col-xs-9" value="C">C</li>
+        <li id="divide" class="calc-operator calc-item col-xs-3" value="/">/</li>
+        </div>
 
-        <li id="add" class="calc-operator calc-item" value="+">+</li>
-        <li id="subtract" class="calc-operator calc-item" value="-">-</li>
-        <li id="divide" class="calc-operator calc-item" value="/">/</li>
-        <li id="multiply" class="calc-operator calc-item" value="*">*</li>
-        <li  id="equals" class="calc-item" value="=">=</li>
+        <div class="row align-items-center">
+        <li id="seven"class="calc-num calc-item col-xs-3" value="7">7</li>
+        <li id="eight" class="calc-num calc-item col-xs-3" value="8">8</li>
+        <li id="nine" class="calc-num calc-item col-xs-3" value="9">9</li>
+        <li id="multiply" class="calc-operator calc-item col-xs-3" value="*">*</li>
+        </div>
 
-        <li id="clear" class="calc-item" value="C">C</li>
+        <div class="row align-items-center">
+        <li id="four" class="calc-num calc-item col-xs-3" value="4">4</li>
+        <li id="five"class="calc-num calc-item col-xs-3" value="5">5</li>
+        <li id="six" class="calc-num calc-item col-xs-3" value="6">6</li>
+        <li id="subtract" class="calc-operator calc-item col-xs-3" value="-">-</li>
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+        <li id="one" class="calc-num calc-item col-xs-3 align-self-center" value="1">1</li>
+        <li id="two" class="calc-num calc-item col-xs-3 align-self-center" value="2">2</li>
+        <li id="three" class="calc-num calc-item col-xs-3 align-self-center" value="3">3</li>
+        <li id="add" class="calc-operator calc-item col-xs-3 align-self-center" value="+">+</li>
+        </div>
+
+        <div class="row align-items-center">
+        <li id="decimal" class="calc-item col-xs-6 align-self-center" value=".">.</li>
+        <li id="zero" class="calc-num calc-item col-xs-6 align-self-center" value="0">0</li>
+        </div>
+        
+        <div class="row align-items-center justify-content-center">
+        <li id="equals" class="calc-item col-xs-12 align-self-center" value="=">=</li>
+        </div>
+
+        
     </ul>
         
     </div>

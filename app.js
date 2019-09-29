@@ -73,11 +73,11 @@ $(function calc () {
         arr.push(operator);
 
         // handles multiple operators used in a row
-        if (arr[arr.length-2] === ("+" || "-" || "/" || "*")) {
-            if (arr[arr.length-1] === ("+" || "-" || "/" || "*")) {
+        if ((arr[arr.length-2] === "+" || arr[arr.length-2] === "-" || arr[arr.length-2] === "*" || arr[arr.length-2] === "/")) {
+            if ((arr[arr.length-1] === "+" || arr[arr.length-1] === "-" || arr[arr.length-1] === "*" || arr[arr.length-1] === "/")) {
                 arr.splice(arr.length-2,1);
+                console.log(arr);
             }
-            console.log(arr);
         }
         
         if (reference) {
@@ -98,7 +98,6 @@ $(function calc () {
          console.log(arr);
     });
     
-    
     // *** clears the array with the "C" button; clears the answer div ***//
     $('#clear').on('click', function() {   
         arr = [];
@@ -108,4 +107,24 @@ $(function calc () {
         console.log("clear");
         $('#display').html("0");
     });
-})
+
+
+
+    // *** executes equals function when spacebar is pressed ***//
+    $( function() {
+        $('html').bind("keypress keydown", function(e) {
+           
+            if (e.which == 32){
+                
+            $('#display').html(Math.round(1000*eval(arr.join('')))/1000);
+
+            arr = [eval(arr.join(''))];
+            reference = true;
+            referenceArr = [eval(arr.join(''))];
+
+            console.log(arr);
+            }
+    });
+            
+    });
+});
