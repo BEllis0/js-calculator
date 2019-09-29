@@ -5,6 +5,9 @@ $(function calc () {
     let reference = false; // used to test if = sign was pushed
     let referenceArr = []; // if = was used, tests if next item is an operator or num
 
+    // initial display state
+    $('#display').html('0');
+    
     // adds the nums to the array (0-9)
     $('.calc-num').on('click', function() {
     
@@ -21,7 +24,6 @@ $(function calc () {
             }
             reference = false;
         }
-        
         console.log(arr);
     });
 
@@ -51,8 +53,6 @@ $(function calc () {
             arr.pop()
         }
 
-        console.log(arr);
-
         if (reference) {
             referenceArr.push(decimalPoint);
             if (referenceArr[1] === ".") {
@@ -62,7 +62,6 @@ $(function calc () {
             }
         }
         console.log(arr);
-
     });
 
 
@@ -76,38 +75,28 @@ $(function calc () {
         // handles multiple operators used in a row
         if (arr[arr.length-2] === ("+" || "-" || "/" || "*")) {
             if (arr[arr.length-1] === ("+" || "-" || "/" || "*")) {
-                // arr.slice(arr.length-2,arr.length-2);
-                arr.pop();
-            } 
+                arr.splice(arr.length-2,1);
+            }
+            console.log(arr);
         }
-
+        
         if (reference) {
             referenceArr.push(operator);
             reference = false;
         }
-
-        //****need to remove operators except for the last one used; pop will not work
-        console.log(arr)
-
-
     });
 
     // **** joins & evaluates array; clears arr and adds answer; displays answer in answer div ***//
     $('#equals').on('click', function() {
 
-
-        $('#answer').html(Math.round(1000*eval(arr.join('')))/1000);
+        $('#display').html(Math.round(1000*eval(arr.join('')))/1000);
 
          arr = [eval(arr.join(''))];
          reference = true;
          referenceArr = [eval(arr.join(''))];
 
          console.log(arr);
-
-         //if num after click, reset arr and add it to the arr
-
     });
-
     
     
     // *** clears the array with the "C" button; clears the answer div ***//
@@ -117,6 +106,6 @@ $(function calc () {
         reference = false;
 
         console.log("clear");
-        $('#answer').html(arr);
+        $('#display').html("0");
     });
 })
