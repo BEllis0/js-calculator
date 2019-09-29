@@ -1,5 +1,18 @@
+#app {
+  width: 350px;
+  height: auto;
+  color: white;
+  background-color: black;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px inset red;
+  border-radius: 10px;
+  display: grid;
+}
+
 ul {
-  color: red;
+  list-style: none;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
