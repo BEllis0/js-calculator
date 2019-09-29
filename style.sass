@@ -2,7 +2,7 @@
 
 
 #app
-    width: 350px
+    width: auto
     height: auto
     color: white
     background-color: black
@@ -11,8 +11,62 @@
     border: 2px inset red
     border-radius: 10px
     display: grid
+    grid-template-columns: 80px 80px 80px 80px
+    grid-template-rows: 80px 80px 80px 80px
+    grid-template-areas: "display display clear divide" "seven eight nine multiply" "four five six subtract" "one two three addition" "zero zero decimal equals"
+        
 
 ul
     list-style: none
     font-size: 24px
+
+#display
+    grid-area: display
     
+#zero
+    grid-area: zero
+
+#one
+    grid-area: one
+
+#two
+    grid-area: two
+
+#three
+    grid-area: three
+
+#four
+    grid-area: four
+
+#five
+    grid-area: five
+
+#six
+    grid-area: six
+
+#seven
+    grid-area: seven
+
+#eight
+    grid-area: eight
+
+#nine
+    grid-area: nine
+
+#divide
+    grid-area: divide
+
+#add
+    grid-area: addition
+
+#subtract
+    grid-area: subtract
+
+#multiply
+    grid-area: multiply
+
+#equals
+    grid-area: equals
+
+#clear
+    grid-area: clear
