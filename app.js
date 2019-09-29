@@ -11,7 +11,8 @@ $(function calc () {
     // adds the nums to the array (0-9)
     $('.calc-num').on('click', function() {
     
-        $('#display').html($(this).attr("value"));
+        //$('#display').html($(this).attr("value"));
+        
         let num = $(this).attr("value");
         arr.push(num);
 
@@ -25,6 +26,9 @@ $(function calc () {
             reference = false;
         }
         console.log(arr);
+
+        // display current equation
+        $('#display').html(arr.join(''));
     });
 
 
@@ -35,6 +39,7 @@ $(function calc () {
         let decimalPoint = $(this).attr("value");
         arr.push(decimalPoint);
 
+        
         //removes multiple decimals used in a row
         if (arr[arr.length-2] === (".")) {
             if (arr[arr.length-1] === (".")) {
@@ -62,6 +67,9 @@ $(function calc () {
             }
         }
         console.log(arr);
+
+        // display current equation
+        $('#display').html(arr.join(''));
     });
 
 
@@ -72,6 +80,7 @@ $(function calc () {
         let operator = $(this).attr("value");
         arr.push(operator);
 
+        
         // handles multiple operators used in a row
         if ((arr[arr.length-2] === "+" || arr[arr.length-2] === "-" || arr[arr.length-2] === "*" || arr[arr.length-2] === "/")) {
             if ((arr[arr.length-1] === "+" || arr[arr.length-1] === "-" || arr[arr.length-1] === "*" || arr[arr.length-1] === "/")) {
@@ -84,6 +93,9 @@ $(function calc () {
             referenceArr.push(operator);
             reference = false;
         }
+
+        // display current equation
+        $('#display').html(arr.join(''));
     });
 
     // **** joins & evaluates array; clears arr and adds answer; displays answer in answer div ***//

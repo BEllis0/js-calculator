@@ -7,21 +7,33 @@
   margin: auto;
   margin-top: 50px;
   border-radius: 10px;
+  text-align: center;
 }
 #app ul {
   list-style: none;
+  margin-left: -25px;
+  margin-right: 15px;
+  margin-bottom: 0;
 }
 #app .calc-item {
   padding: 15px;
   border: 1px solid gray;
   margin: none;
+  -moz-box-shadow: inset 0 0 15px #FFF8F0;
+  -webkit-box-shadow: inset 0 0 15px #FFF8F0;
+  box-shadow: inset 0 0 15px #FFF8F0;
 }
 #app #display {
-  width: 97.2%;
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
   padding: 30px;
-  padding-left: 40px !important;
+  padding-left: 25px !important;
   background-color: #1D3557;
-  margin-left: 25px;
+  border-radius: 10px 10px 0 0;
+  -moz-box-shadow: inset 0 0 15px #FFF8F0;
+  -webkit-box-shadow: inset 0 0 15px #FFF8F0;
+  box-shadow: inset 0 0 15px #FFF8F0;
 }
 #app .calc-num {
   background-color: #BD8B9C;
@@ -34,6 +46,8 @@
 }
 #app #equals {
   background-color: #C492B1;
+  border-bottom: none;
+  border-radius: 0 0 10px 10px;
 }
 #app #clear {
   background-color: #D5B942;
