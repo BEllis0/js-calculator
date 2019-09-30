@@ -2,7 +2,7 @@ $(function calc () {
 
     // used to store the nums & operators in the equation
     let arr = [];
-    let reference = false; // used to test if = sign was pushed
+    let reference = false; // used to test if = sign was clicked
     let referenceArr = []; // if = was used, tests if next item is an operator or num
 
     // initial display state
@@ -80,6 +80,12 @@ $(function calc () {
         let operator = $(this).attr("value");
         arr.push(operator);
 
+        if ((arr[0] === "+" || arr[0] === "-" || arr[0] === "*" || arr[0] === "/")) {
+            
+            arr.pop();
+            $('#display').html('0');
+        }
+
         
         // handles multiple operators used in a row
         if ((arr[arr.length-2] === "+" || arr[arr.length-2] === "-" || arr[arr.length-2] === "*" || arr[arr.length-2] === "/")) {
@@ -136,7 +142,7 @@ $(function calc () {
 
             console.log(arr);
             }
-    });
+        });
             
     });
 });
