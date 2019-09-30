@@ -16,6 +16,11 @@ $(function calc () {
         let num = $(this).attr("value");
         arr.push(num);
 
+        if (arr[0] === "0") {
+            $('#display').html('0');
+            arr.pop();
+        }
+        else {$('#display').html(arr.join(''));}
         // after an =, if a num is used, clears the array
         if (reference) {
             referenceArr.push(num);
@@ -28,7 +33,7 @@ $(function calc () {
         console.log(arr);
 
         // display current equation
-        $('#display').html(arr.join(''));
+        
     });
 
 
@@ -82,10 +87,10 @@ $(function calc () {
 
         // if first click is operator, remove
         if ((arr[0] === "+" || arr[0] === "-" || arr[0] === "*" || arr[0] === "/")) {
-            
-            arr.pop();
             $('#display').html('0');
+            arr.pop();
         }
+        else {$('#display').html(arr.join(''));}
 
         console.log(arr);
         // handles multiple operators used in a row
@@ -102,13 +107,11 @@ $(function calc () {
         }
 
         // display current equation
-        $('#display').html(arr.join(''));
+        
     });
 
     // **** joins & evaluates array; clears arr and adds answer; displays answer in answer div ***//
     $('#equals').on('click', function() {
-
-        $('#display').html(Math.round(1000*eval(arr.join('')))/1000);
 
          arr = [eval(arr.join(''))];
          reference = true;
@@ -116,7 +119,9 @@ $(function calc () {
 
          if (arr[0] === undefined) {
              $('#display').html("0");
+             arr.pop()
          }
+         else {$('#display').html(Math.round(1000*eval(arr.join('')))/1000);}
          console.log(arr);
     });
     
