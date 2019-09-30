@@ -80,13 +80,14 @@ $(function calc () {
         let operator = $(this).attr("value");
         arr.push(operator);
 
+        // if first click is operator, remove
         if ((arr[0] === "+" || arr[0] === "-" || arr[0] === "*" || arr[0] === "/")) {
             
             arr.pop();
             $('#display').html('0');
         }
 
-        
+        console.log(arr);
         // handles multiple operators used in a row
         if ((arr[arr.length-2] === "+" || arr[arr.length-2] === "-" || arr[arr.length-2] === "*" || arr[arr.length-2] === "/")) {
             if ((arr[arr.length-1] === "+" || arr[arr.length-1] === "-" || arr[arr.length-1] === "*" || arr[arr.length-1] === "/")) {
@@ -113,6 +114,9 @@ $(function calc () {
          reference = true;
          referenceArr = [eval(arr.join(''))];
 
+         if (arr[0] === undefined) {
+             $('#display').html("0");
+         }
          console.log(arr);
     });
     
