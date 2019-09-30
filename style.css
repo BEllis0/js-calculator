@@ -54,4 +54,34 @@
   color: #AF125A;
 }
 
+#custom-color-dropdown {
+  width: 200px !important;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.show {
+  display: block;
+}
+
+#button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
 /*# sourceMappingURL=style.css.map */
