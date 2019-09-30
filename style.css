@@ -1,7 +1,7 @@
 #app {
   width: 350px;
   height: auto;
-  color: #F8F4E3;
+  color: black;
   font-size: 20px;
   background-color: none;
   margin: auto;
@@ -19,9 +19,6 @@
   padding: 15px;
   border: 1px solid gray;
   margin: none;
-  -moz-box-shadow: inset 0 0 15px #FFF8F0;
-  -webkit-box-shadow: inset 0 0 15px #FFF8F0;
-  box-shadow: inset 0 0 15px #FFF8F0;
 }
 #app #display {
   width: 100%;
@@ -29,28 +26,31 @@
   text-align: left;
   padding: 30px;
   padding-left: 25px !important;
-  background-color: #1D3557;
+  background-color: none;
+  border: 1px solid gray;
   border-radius: 10px 10px 0 0;
   -moz-box-shadow: inset 0 0 15px #FFF8F0;
   -webkit-box-shadow: inset 0 0 15px #FFF8F0;
   box-shadow: inset 0 0 15px #FFF8F0;
 }
 #app .calc-num {
-  background-color: #BD8B9C;
+  background-color: none;
 }
 #app .calc-operator {
-  background-color: #50808E;
+  background-color: none;
 }
 #app #decimal {
-  background-color: #AF125A;
+  background-color: none;
 }
 #app #equals {
-  background-color: #C492B1;
+  background-color: none;
+  font-size: 25px;
   border-bottom: none;
   border-radius: 0 0 10px 10px;
+  border: 1px solid gray;
 }
 #app #clear {
-  background-color: #D5B942;
+  background-color: none;
   color: #AF125A;
 }
 
@@ -59,12 +59,10 @@
   margin: 0 auto;
   margin-top: 25px;
 }
-
-.show {
+#custom-color-dropdown .show {
   display: block;
 }
-
-#button {
+#custom-color-dropdown #button {
   background-color: black;
   color: white;
   width: 100%;
@@ -74,14 +72,34 @@
   border-radius: 4px;
   cursor: pointer;
 }
-
-.dropdown-content {
+#custom-color-dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  padding: 8px;
+}
+#custom-color-dropdown .custom-item {
+  padding: 5px;
+  border-radius: 2px;
+}
+#custom-color-dropdown #winter-fresh:hover {
+  background-color: #7DA9C2;
+  color: #F8F4E3;
+}
+#custom-color-dropdown #sunset:hover {
+  background-color: #FFAE03;
+  color: #FFF589;
+}
+#custom-color-dropdown #rose-gold:hover {
+  background-color: #7DA9C2;
+  color: #F8F4E3;
+}
+#custom-color-dropdown #evergreen-forest:hover {
+  background-color: #7DA9C2;
+  color: #F8F4E3;
 }
 
 /*# sourceMappingURL=style.css.map */
