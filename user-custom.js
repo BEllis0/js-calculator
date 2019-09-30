@@ -27,6 +27,7 @@ $(document).ready(function() {
         $('#clear').css('color', '#08415C');
         $('#equals').css('color', '#08415C');
         $('#app').css('color', '#F8F4E3');
+        $('#display').css('color', '#F8F4E3');
     })
 
     $('#sunset').click(function() {
