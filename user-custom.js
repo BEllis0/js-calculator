@@ -66,5 +66,18 @@ $(document).ready(function() {
         $('#app').css('color', '#F8F4E3');
     })
 
+    $('#reset').click(function() {
+        $('.calc-num').css('backgroundColor', '');
+        $('.calc-operator').css('backgroundColor', '');
+        $('#decimal').css('backgroundColor', '');
+        $('#equals').css('backgroundColor', '');
+        $('#clear').css('backgroundColor', '');
+        $('#display').css('backgroundColor', '');
+        $('#clear').css('color', 'red');
+        $('#equals').css('color', 'black');
+        $('#app').css('color', 'black');
+        $('#display').css('color', 'black');
+    })
+
     
 })

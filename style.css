@@ -101,5 +101,9 @@
   background-color: #7DA9C2;
   color: #F8F4E3;
 }
+#custom-color-dropdown #reset {
+  background-color: red;
+  color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
