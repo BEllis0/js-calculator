@@ -1,7 +1,6 @@
 $(function calc () {
 
-    // used to store the nums & operators in the equation
-    let arr = [];
+    let arr = []; // used to store the nums & operators in the equation
     let reference = false; // used to test if = sign was clicked
     let referenceArr = []; // if = was used, tests if next item is an operator or num
 
